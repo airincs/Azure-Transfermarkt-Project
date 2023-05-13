@@ -23,7 +23,7 @@ The goal of this data engineering project was to move soccer transfermarkt (Germ
 ## Data Source
 Transfermarkt Data: https://www.kaggle.com/datasets/davidcariboo/player-scores
 
-![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/Project Images/Azure Dashboard.PNG)
+![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/Azure%20Dashboard.PNG?raw=true)
 
 ## Azure Setup
 We will be using the following resources within Azure: Data Factory, Databricks, Azure Blob Storage (Storage Account), Azure Data Lake Gen2 (Storage Account), SQL Database, and a Key Vault.

@@ -23,55 +23,56 @@ The goal of this data engineering project was to move soccer transfermarkt (Germ
 ## Data Source
 Transfermarkt Data: https://www.kaggle.com/datasets/davidcariboo/player-scores
 
-![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/Azure%20Dashboard.PNG?raw=true)
-
 ## Azure Setup
 We will be using the following resources within Azure: Data Factory, Databricks, Azure Blob Storage (Storage Account), Azure Data Lake Gen2 (Storage Account), SQL Database, and a Key Vault.
 A resource group was created to hold all of these resources.
 
-DASHBOARD IMG
+![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/Azure%20Dashboard.PNG?raw=true)
 
 ## Project Steps
 
 ### Ingestion into Azure Blob Storage
 The first step was to upload the CSV files into a Blob Storage container called 'soccer-data-dump'.
 
-IMG
+![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/abs%20container.PNG?raw=true)
 
 ### ADL2 Container Creation
 Two containers were created inside of the Azure Data Lake Gen2: raw and clean. Raw will recieve the CSV files from the Blob Storage, and the clean container will contain the Databricks transformed files.
 
-IMG
+![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/datalake%20container.PNG?raw=true)
 
 ### Azure Data Factory Datasets and Pipelines
 Datasets were formed with ADF that were used to copy the CSV files from the Blob Storage to the Data Lake.
 
 IMG
+![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/Azure%20Dashboard.PNG?raw=true)
 
 ADF pipelines were then used to check the Blob Storage files, and then the CSVs were copied into the Data Lake's raw container.
 
-IMG pipes
+![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/adf%20datasets.PNG?raw=true)
 
-IMG raw
+
+![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/Pipeline%20ADF%20Layout.PNG?raw=true)
 
 ### Databricks Transformation
 Databricks and PySpark were used to read in and transform the CSV files. After they were altered, they were then uploaded into the Data Lake's clean container.
 
-IMG
+![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/databricks.PNG?raw=true)
+
 
 This Databricks notebook is orchestrated by Azure Data Factory.
 
-IMG
+![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/databricks%20in%20adf.PNG?raw=true)
 
 ### Azure Data Studio Playground
 I created tables within Azure Data Studio and used the soccer transfermarkt data to play around with different SQL queries, in order to explore the data.
 
-IMG
+![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/SQL%20Table%20Example.PNG?raw=true)
 
 ### PowerBI Integration
 The clean data was then uploaded into a Power BI PBIX file. **The dashboard is simply a rough visualization of some data points. It is not an accurate attempt at designing an excellent dashboard**
 
-IMG
+![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/Dashboard.PNG?raw=true)
 
 
 

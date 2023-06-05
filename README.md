@@ -37,7 +37,7 @@ The first step was to upload the CSV files into a Blob Storage container called 
 ![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/abs%20container.PNG?raw=true)
 
 ### ADL2 Container Creation
-Two containers were created inside of the Azure Data Lake Gen2: raw and clean. Raw will recieve the CSV files from the Blob Storage, and the clean container will contain the Databricks transformed files.
+Two containers were created inside of the Azure Data Lake Gen2: raw and clean. Raw will receive the CSV files from the Blob Storage, and the clean container will contain the Databricks transformed files.
 
 ![alt text](https://github.com/airincs/Azure-Transfermarkt-Project/blob/main/Project%20Images/datalake%20container.PNG?raw=true)
 

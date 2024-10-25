@@ -18,7 +18,7 @@
 - PowerBI
 
 ## Purpose and Summary
-The goal of this data engineering project was to move soccer transfermarkt (German data source) through an Azure Data Factory pipeline system, ultimately it landing in a Power BI dashboard.
+The goal of this data engineering project was to move soccer transfermarkt (German data source) through an Azure Data Factory pipeline system, ultimately it landing in a Power BI dashboard. 
 
 ## Data Source
 Transfermarkt Data: https://www.kaggle.com/datasets/davidcariboo/player-scores
